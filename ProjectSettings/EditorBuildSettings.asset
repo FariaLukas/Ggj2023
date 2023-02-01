@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_Test_Movement.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/SCN_Main_Menu.unity
+    guid: a112fc0a16fe2d24c9f3e70d0d596563
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2fb194e267a8b1849a7fb077fb5a3ed5, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: ecf33845d93807a438cd13cdf45cbd81, type: 2}

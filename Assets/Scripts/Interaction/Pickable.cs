@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Pickable : CollisionDetection
+public class Pickable : CollisionDetection, IResetable
 {
     [SerializeField] private PickableData Data;
     [FoldoutGroup("Events")]
@@ -22,6 +22,13 @@ public class Pickable : CollisionDetection
     private float _journeyLength;
     protected Transform _target;
 
+    private Vector2 _initialPosition;
+    private bool _collected;
+
+    private void Awake()
+    {
+        _initialPosition = transform.position;
+    }
 
     protected override void TriggerEnter(GameObject instigator)
     {
@@ -68,5 +75,21 @@ public class Pickable : CollisionDetection
 
         if (Data)
             Inventory.Instance?.AddItem(Data.Identifier);
+
+        _collected = true;
+    }
+
+    public void OnReset()
+    {
+        transform.position = _initialPosition;
+        Collider.enabled = true;
+        Visual.gameObject.SetActive(true);
+        if (Data)
+            Inventory.Instance?.RemoveItem(Data.Identifier);
+    }
+
+    public bool Colected()
+    {
+        return _collected;
     }
 }
