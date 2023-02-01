@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SCN_Test_Movement_Bigger.unity
+    guid: b78912ca8f4e0e542835f2dd43a7b936
+  - enabled: 1
     path: Assets/Scenes/SCN_Test_Movement.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
