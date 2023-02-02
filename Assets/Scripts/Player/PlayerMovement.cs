@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 MinSpeed;
     [SerializeField] private Vector2 XDeadzone = new Vector2(-.05f, .05f), YDeadzone = new Vector2(-.05f, .05f);
 
-
+    [SerializeField] private FloodgatesPipe _pipe;
     private Vector3 _lerpAcceleration;
     private Vector3 _acceleration;
 
@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!_pipe.IsOpen()) return;
         _acceleration = Input.acceleration;
         _acceleration.x = _acceleration.x > XDeadzone.x && _acceleration.x < XDeadzone.y ? 0 : _acceleration.x;
         _acceleration.y = _acceleration.y > YDeadzone.x && _acceleration.y < YDeadzone.y ? 0 : _acceleration.y;
@@ -43,6 +44,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!_pipe.IsOpen())
+        {
+            _lerpAcceleration = _acceleration = Vector3.zero;
+            return;
+        }
+
         if (MovementType != Movement.AddForce) return;
 
         _lerpAcceleration = Vector3.Lerp(_lerpAcceleration, _acceleration, LerpSpeed * Time.fixedDeltaTime);

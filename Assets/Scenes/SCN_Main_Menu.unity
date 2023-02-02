@@ -256,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2481055430825266596, guid: 03e7583728ec3a4498cac7af3c688d6e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: LoadLastActiceScene
       objectReference: {fileID: 0}
     - target: {fileID: 2481055430825266596, guid: 03e7583728ec3a4498cac7af3c688d6e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad:
-    sceneAsset: {fileID: 0}
-    scenePath: 
+    sceneAsset: {fileID: 102900000, guid: b78912ca8f4e0e542835f2dd43a7b936, type: 3}
+    scenePath: Assets/Scenes/SCN_Test_Movement_Bigger.unity
 --- !u!1 &665741936
 GameObject:
   m_ObjectHideFlags: 0

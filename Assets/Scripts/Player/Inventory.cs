@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Inventory : Singleton<Inventory>
 {
-    public const string saveKey = "Inventory";
+    public const string keysSave = "Inventory";
+    public const string storageSave = "Awards";
     public List<string> CurrentHeldObjects = new List<string>();
+    public List<string> AwardsObjects = new List<string>();
 
     public System.Action OnUpdateInventory;
 
@@ -18,7 +20,13 @@ public class Inventory : Singleton<Inventory>
     public void AddItem(string itemName)
     {
         CurrentHeldObjects.Add(itemName);
+
+        if (!AwardsObjects.Contains(itemName))
+            AwardsObjects.Add(itemName);
+
         OnUpdateInventory?.Invoke();
+
+        Save();
     }
 
     public void RemoveItem(string itemName)
@@ -26,11 +34,13 @@ public class Inventory : Singleton<Inventory>
         if (!CurrentHeldObjects.Contains(itemName)) return;
         CurrentHeldObjects.Remove(itemName);
         OnUpdateInventory?.Invoke();
+        Save();
     }
 
     protected void Save()
     {
         //ES3.Save(saveKey, CurrentHeldObjects);
+        //ES3.Save(storageSave, AwardsObjects);
     }
 
     public bool HasItem(string itemName)
@@ -42,6 +52,9 @@ public class Inventory : Singleton<Inventory>
     {
         // if (ES3.KeyExists(saveKey))
         //     ES3.LoadInto(saveKey, CurrentHeldObjects);
+
+        // if (ES3.KeyExists(storageSave))
+        //     ES3.LoadInto(storageSave, AwardsObjects);
 
         OnUpdateInventory?.Invoke();
     }
