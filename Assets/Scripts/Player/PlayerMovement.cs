@@ -21,11 +21,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!PlayerRigidbody)
             TryGetComponent(out PlayerRigidbody);
+
+#if UNITY_EDITOR
+        MovementSpeed /= 2;
+#endif
     }
 
     private void Update()
     {
         if (!_pipe.IsOpen()) return;
+
         _acceleration = Input.acceleration;
         _acceleration.x = _acceleration.x > XDeadzone.x && _acceleration.x < XDeadzone.y ? 0 : _acceleration.x;
         _acceleration.y = _acceleration.y > YDeadzone.x && _acceleration.y < YDeadzone.y ? 0 : _acceleration.y;
@@ -58,9 +63,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (dir.sqrMagnitude > 1) dir.Normalize();
 
-        PlayerRigidbody.MovePosition((Vector2)transform.position + dir * MovementSpeed * Time.fixedDeltaTime);
+#if UNITY_EDITOR
+        dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+#endif
 
-        // Debug.Log($"Dir{dir} Velocity{PlayerRigidbody.velocity} Lerp{_lerpAcceleration} SetMinValue {SetMinValue(dir)}");
+        PlayerRigidbody.MovePosition((Vector2)transform.position + dir * MovementSpeed * Time.fixedDeltaTime);
     }
 
     protected void AddForce()

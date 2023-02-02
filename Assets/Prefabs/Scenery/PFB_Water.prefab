@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89c576f637e224882c2dba0252a795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.001
+  scrollSpeed: 0.0005
   radius: 1
   minDist: 0.1
 --- !u!1 &4781995433903338047
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac89c576f637e224882c2dba0252a795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.001
+  scrollSpeed: 0.0005
   radius: 1
   minDist: 0.1
 --- !u!1 &4781995434399281866

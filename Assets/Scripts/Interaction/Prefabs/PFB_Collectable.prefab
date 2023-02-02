@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4308412996074856324}
   - component: {fileID: 4308412996074856322}
   - component: {fileID: 4308412996074856323}
+  - component: {fileID: 6228942537253073278}
   m_Layer: 0
   m_Name: PFB_Collectable
   m_TagString: Untagged
@@ -66,6 +67,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   Collider: {fileID: 4308412996074856322}
+  gizmoColor: {r: 0, g: 0, b: 0, a: 0}
   OnEnterEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -80,10 +82,39 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Visual: {fileID: 4308412996074856324}
-  Animate: 0
+  IsCheckpoint: 1
+  Animate: 1
   HideOnPick: 1
   Speed: 0.4
   MinDistance: 0.1
+--- !u!114 &6228942537253073278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308412996074856320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c0a8040cbe8774fa028af50d5fecea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayerToDetect:
+    serializedVersion: 2
+    m_Bits: 8
+  Collider: {fileID: 4308412996074856322}
+  gizmoColor: {r: 0, g: 0, b: 0, a: 0}
+  OnEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ShowWarning: 1
+  SetCheckpointOnTrigger: 0
 --- !u!1 &4308412996623731813
 GameObject:
   m_ObjectHideFlags: 0
