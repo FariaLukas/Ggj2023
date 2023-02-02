@@ -29,7 +29,9 @@ public class SceneLoader : MonoBehaviour
         if (ES3.KeyExists(sceneSave))
         {
             int lastScene = ES3.Load<int>(sceneSave);
-            SceneManager.LoadScene(lastScene);
+            if (lastScene != 0)
+                SceneManager.LoadScene(lastScene);
+            else LoadScene();
         }
         else
         {
