@@ -13,8 +13,11 @@ public class AnimateVines : CollisionDetection
     protected override void TriggerEnter(GameObject instigator)
     {
         base.TriggerEnter(instigator);
-        Animating = true;
-        MaskObject.transform.DOScaleY(0, Speed).SetEase(ease).OnComplete(() => FinishAnimation());
+        if (MaskObject)
+        {
+            MaskObject.transform.DOScaleY(0, Speed).SetEase(ease).OnComplete(() => FinishAnimation());
+            Animating = true;
+        }
         Collider.enabled = false;
     }
 
