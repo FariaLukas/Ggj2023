@@ -10,6 +10,8 @@ public class CollisionDetection : MonoBehaviour
     public LayerMask LayerToDetect;
     [SerializeField] protected Collider2D Collider;
 
+    [SerializeField] private Color gizmoColor;
+
     [FoldoutGroup("Events")]
     [PropertyOrder(2)]
     public UnityEvent OnEnterEvent;
@@ -70,5 +72,17 @@ public class CollisionDetection : MonoBehaviour
     {
         OnExit?.Invoke();
         OnExitEvent?.Invoke();
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (!Collider) return;
+        if (Collider is BoxCollider2D)
+        {
+            Gizmos.color = gizmoColor;
+
+            BoxCollider2D col = (BoxCollider2D)Collider;
+            Gizmos.DrawCube(transform.position + (Vector3)Collider.offset, col.size);
+        }
     }
 }

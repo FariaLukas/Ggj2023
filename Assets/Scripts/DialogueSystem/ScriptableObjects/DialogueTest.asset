@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d417cab89162b4ab77d1a1030ad641, type: 3}
+  m_Name: DialogueTest
+  m_EditorClassIdentifier: 
+  Dialogue:
+  - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
+    Message: "Meu deus, voce eh uma sapa\t"
+  - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
+    Message: Sim e voce eh oque doidao
+  - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
+    Message: Ta parecendo que ta rolando uma treta
+  - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
+    Message: Eu nao, eles que se matem
