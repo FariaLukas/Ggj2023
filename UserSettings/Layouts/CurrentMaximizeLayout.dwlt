@@ -88,7 +88,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 274
     height: 556
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -227,9 +227,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 44b5ffff
-      m_LastClickedID: -19132
-      m_ExpandedIDs: 48b5ffffa0b5ffff58b6ffff72b7ffff22e0ffff8cf0ffff1ef4ffff9cf4ffff9cf8ffff08fbffff7a8c0000
+      m_SelectedIDs: 6ee3feff
+      m_LastClickedID: -72850
+      m_ExpandedIDs: 36e1feff3ee1feffc8e3feff16e4fefff0e4feff36ecfeffc2f2feff922affff7e46ffff44b5ffff04b6ffff50b6ffff58b6ffff72b7ffff22e0ffff8cf0ffff1ef4ffff9cf4ffff9cf8ffff08fbffff7a8c0000c48c0000528d0000ec560100f6560100825901008c590100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 538
     height: 556
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -559,9 +559,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.316931, y: -9.225155, z: -0.21575123}
+    m_Target: {x: -5.7924266, y: 11.29867, z: -1.7054534}
     speed: 2
-    m_Value: {x: 0.316931, y: -9.225155, z: -0.21575123}
+    m_Value: {x: -5.7924266, y: 11.29867, z: -1.7054534}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,9 +612,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 22.282257
+    m_Target: 8.768459
     speed: 2
-    m_Value: 22.282257
+    m_Value: 8.768459
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -658,8 +658,8 @@ MonoBehaviour:
     y: 0
     width: 476
     height: 556
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -733,22 +733,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Interaction
+    - Assets/Scripts/Interaction/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Interaction
+  - Assets/Scripts/Interaction/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Lucas Faria\Documents\Unity\Ggj2023
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 126}
-    m_SelectedIDs: 38680000
-    m_LastClickedID: 26680
-    m_ExpandedIDs: 000000003468000036680000386800006e68000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 191}
+    m_SelectedIDs: b6680000
+    m_LastClickedID: 26806
+    m_ExpandedIDs: 000000003468000036680000386800006e6800007e680000bc68000058730000b07c00002c7d0000e482000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -764,7 +764,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -776,7 +776,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000034680000366800003868000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000003468000036680000386800006e6800007e680000bc68000058730000b07c00002c7d0000e482000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -801,10 +801,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 44b5ffff
-    m_LastClickedInstanceID: -19132
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_SelectedInstanceIDs: 6ee3feff
+    m_LastClickedInstanceID: -72850
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000046c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

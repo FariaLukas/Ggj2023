@@ -13,10 +13,20 @@ public class AnimatePause : MonoBehaviour
     [Header("References")]
     [SerializeField] protected ViewReferences ViewReferences;
 
+    public void AnimateIn()
+    {
+        AnimateIn(null);
+    }
+
     public void AnimateIn(UnityEvent onEnd = null)
     {
         ExitSettings.TryAdjustParemeter(ViewReferences);
         EnterSettings.Animate(ViewReferences, AnimationKind.IN, DisableOnExit, onEnd);
+    }
+
+    public void AnimateOut()
+    {
+        AnimateOut(null);
     }
 
     public void AnimateOut(UnityEvent onEnd = null)

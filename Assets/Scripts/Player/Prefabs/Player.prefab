@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 5148354380294616868}
   - component: {fileID: 3749779658380526985}
   - component: {fileID: 3502452946451288028}
+  - component: {fileID: 6260785600864871664}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementType: 1
   PlayerRigidbody: {fileID: 5754036453476085031}
-  MovementSpeed: 12
+  MovementSpeed: 15
   LerpSpeed: 2
   MinSpeed: {x: 0, y: 0}
   XDeadzone: {x: -0.05, y: 0.05}
@@ -247,6 +248,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53b6bcd09de669d418c41f0b78eee547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floodgateName: 
+--- !u!114 &6260785600864871664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754036453476085468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed28ecf8edd629749954a2de7211f73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   floodgateName: 
