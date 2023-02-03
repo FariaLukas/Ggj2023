@@ -44,6 +44,9 @@ public class DialogueManager : Singleton<DialogueManager>
 
         SetActorsDisplayer();
 
+        if (Message)
+            Message.text = "";
+
         Animate.AnimateIn(_onEndAnimationIn);
     }
 

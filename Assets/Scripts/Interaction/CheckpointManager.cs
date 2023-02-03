@@ -74,7 +74,6 @@ public class CheckpointManager : Singleton<CheckpointManager>
                 character.transform.position = CurrenCheckpoint ?
                 CurrenCheckpoint.transform.position : transform.position;
             RespawnAnimation.blocksRaycasts = false;
-            Debug.Log("Can Walk");
         });
     }
 }

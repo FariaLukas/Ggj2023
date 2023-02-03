@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8395012515064319728}
   - component: {fileID: 7735408577707753413}
   - component: {fileID: 7971807647972533883}
+  - component: {fileID: 5380211110599731909}
   m_Layer: 5
   m_Name: PFB_Button
   m_TagString: Untagged
@@ -121,3 +122,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5380211110599731909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580728019603289570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f40e27d84eb2a44d8f3ad8b98010a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 11400000, guid: 1349050d4d9805b4eb212ed6b6aeb403, type: 2}
+  settings: {fileID: 0}
+  reset: 0
+  playIfNotPlaying: 0
+  localPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  debug: 0
+  isSfx: 1
+  playOnStart: 0
+  playOnEnable: 0
