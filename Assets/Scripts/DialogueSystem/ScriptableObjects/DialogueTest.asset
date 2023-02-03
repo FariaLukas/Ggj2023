@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
   - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
-    Message: "Meu deus, voce eh uma sapa\t"
+    Message: ' Rootless Tutu finds himself in the middle'
   - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
-    Message: Sim e voce eh oque doidao
+    Message: "Melancholy is rooted in Mosca\u2019s personality. While talking to
+      Tutu\u2019s he makes sure to talk about his roots,"
   - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
-    Message: Ta parecendo que ta rolando uma treta
+    Message: 'his old and stinky father, his house with no walls and his dream of
+      becoming a movie star that is long buried. '
   - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
-    Message: Eu nao, eles que se matem
+    Message: of this mud area and is trying to find a home.

@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public enum Movement { Normal, AddForce, Lerp }
     [SerializeField] private Movement MovementType = Movement.AddForce;
     [SerializeField] private Rigidbody2D PlayerRigidbody;
+    [SerializeField] private bool NotUsingKeyboard;
 
     [SerializeField] private float MovementSpeed = 12;
     [SerializeField] private float LerpSpeed = 2.0f;
@@ -23,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
             TryGetComponent(out PlayerRigidbody);
 
 #if UNITY_EDITOR
-        MovementSpeed /= 2;
+        if (!NotUsingKeyboard)
+            MovementSpeed /= 2;
 #endif
     }
 
@@ -64,7 +66,8 @@ public class PlayerMovement : MonoBehaviour
         if (dir.sqrMagnitude > 1) dir.Normalize();
 
 #if UNITY_EDITOR
-        dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        if (!NotUsingKeyboard)
+            dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 #endif
 
         PlayerRigidbody.MovePosition((Vector2)transform.position + dir * MovementSpeed * Time.fixedDeltaTime);

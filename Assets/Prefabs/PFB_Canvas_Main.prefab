@@ -751,6 +751,14 @@ PrefabInstance:
       propertyPath: ButtonType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4658791160842157459, guid: da8ba242404765b49a16823bdcb9846b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e339205359f0ae84da9b68db8f5d0f36, type: 3}
+    - target: {fileID: 4658791160842157459, guid: da8ba242404765b49a16823bdcb9846b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7053038608281437698, guid: da8ba242404765b49a16823bdcb9846b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -833,6 +841,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7053038608281437698, guid: da8ba242404765b49a16823bdcb9846b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010321636782494471, guid: da8ba242404765b49a16823bdcb9846b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

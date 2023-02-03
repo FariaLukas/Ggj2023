@@ -375,8 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad:
-    sceneAsset: {fileID: 102900000, guid: b78912ca8f4e0e542835f2dd43a7b936, type: 3}
-    scenePath: Assets/Scenes/SCN_Test_Movement_Bigger.unity
+    sceneAsset: {fileID: 102900000, guid: 58b48e3e70bf52c4eadc36207a52f4f7, type: 3}
+    scenePath: Assets/Scenes/Chapters/SCN_Chapter 1.unity
 --- !u!1 &665741936
 GameObject:
   m_ObjectHideFlags: 0

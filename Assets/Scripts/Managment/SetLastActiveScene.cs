@@ -10,7 +10,7 @@ public class SetLastActiveScene : MonoBehaviour
 
     private void Start()
     {
-        ES3.Save(sceneSave, SceneManager.GetActiveScene().buildIndex);
+        ES3.Save(sceneSave, SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void OnComplete()

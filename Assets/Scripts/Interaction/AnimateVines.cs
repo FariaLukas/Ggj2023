@@ -10,6 +10,12 @@ public class AnimateVines : CollisionDetection
     [SerializeField] private GameObject MaskObject;
     [SerializeField] private Ease ease;
 
+    private void Start()
+    {
+        if (MaskObject)
+            MaskObject.SetActive(true);
+    }
+
     protected override void TriggerEnter(GameObject instigator)
     {
         base.TriggerEnter(instigator);
