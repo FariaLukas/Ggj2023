@@ -17,6 +17,7 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private bool isSfx;
     [SerializeField] private bool playOnStart;
     [SerializeField] private bool playOnEnable;
+    [SerializeField] private bool stropAllOnEnable;
     private AudioSource _currenSource;
 
     private void Start()
@@ -41,6 +42,9 @@ public class AudioPlayer : MonoBehaviour
             else
                 PlayAudio();
         }
+
+        if (stropAllOnEnable)
+            AudioManager.Instance?.StopAllSounds();
     }
 
     public void ChangeAudio(AudioClipSO clipSO, AudioSettingsSO settingsSO = null)
@@ -97,9 +101,8 @@ public class AudioPlayer : MonoBehaviour
     {
         if (!_currenSource) return;
         if (CanPlay() && _currenSource.isPlaying &&
-        _currenSource.clip == audioClip.GetAudioClip()) return;
-
-        AudioManager.Instance.StopAudio(_currenSource);
+        _currenSource.clip == audioClip.GetAudioClip())
+            AudioManager.Instance.StopAudio(_currenSource);
     }
 
     protected bool CanPlay()

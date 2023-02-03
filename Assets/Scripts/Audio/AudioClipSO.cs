@@ -8,6 +8,7 @@ using Helper;
 public class AudioClipSO : ScriptableObject
 {
     public bool looping;
+    public bool isMusic;
     public SequenceMode sequenceMode;
 
     [InlineEditor(InlineEditorModes.SmallPreview)]

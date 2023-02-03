@@ -77,6 +77,11 @@ public class AudioManager : Singleton<AudioManager>
                 return null;
         }
 
+        if (clipSO.isMusic)
+        {
+            StopMusic();
+        }
+
         var clip = clipSO.GetAudioClip(reset);
         var source = _pool.GetPoolObject();
         source.gameObject.SetActive(true);
@@ -106,10 +111,22 @@ public class AudioManager : Singleton<AudioManager>
         }
     }
 
+    private void StopMusic()
+    {
+        AudioSource music = null;
+        foreach (var p in _playingSounds)
+        {
+            if (p.Value.isMusic)
+                music = p.Key;
+        }
+        if (music != null)
+            StopAudio(music);
+    }
+
     public void FinishAudio(AudioSource source)
     {
         float timeRemaining = 0;
-        
+
         if (source.clip)
             timeRemaining = source.clip.length - source.time;
 
@@ -159,6 +176,21 @@ public class AudioManager : Singleton<AudioManager>
         {
             Debug.LogError("The AudioMixer parameter was not found");
             return 0f;
+        }
+    }
+
+    public void StopAllSounds()
+    {
+        List<AudioSource> playingSources = new List<AudioSource>();
+
+        foreach (var p in _playingSounds)
+        {
+            playingSources.Add(p.Key);
+        }
+
+        foreach (var p in playingSources)
+        {
+            StopAudio(p);
         }
     }
 
