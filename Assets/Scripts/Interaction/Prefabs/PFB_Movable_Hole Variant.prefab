@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7205625226892566035
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 99570499164811191, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_Name
+      value: PFB_Movable_Hole
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999962
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.008726558
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5874169905990770168, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+--- !u!61 &6746407753466447946 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4494464799249880665, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+  m_PrefabInstance: {fileID: 7205625226892566035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7106182274576937380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 99570499164811191, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+  m_PrefabInstance: {fileID: 7205625226892566035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &960555460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106182274576937380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c9c144f7a42164387e53c8c78ea833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  useTransformPosition: 1
+  waypoints:
+  - {x: 0, y: 0, z: 0}
+  - {x: 1.67, y: 0, z: 0}
+  labelHeight: 0
+  radius: 0.5
+  fontSize: 22
+--- !u!114 &960555464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106182274576937380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054fca16714fffa43b1b6861e52f0f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayerToDetect:
+    serializedVersion: 2
+    m_Bits: 8
+  Collider: {fileID: 6746407753466447946}
+  gizmoColor: {r: 0, g: 0, b: 0, a: 0}
+  OnEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Speed: 5
+  MinDistance: 0.2
+  waypoints: {fileID: 960555460}
+  Lerp: 0
