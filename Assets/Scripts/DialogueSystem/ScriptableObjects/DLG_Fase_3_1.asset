@@ -14,5 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
   - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
-    Message: "Oooh!! In the lands of sun, the rain is just another myth \u266A\u2026
-      Who is there?"
+    Message: Hey roly-poly. Wanna hear a story?
+  - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
+    Message: "No. \r\n"
+  - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
+    Message: "\u2026\r\n"
+  - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
+    Message: "\u2026 Here\u2019s the thing, I never had many friends, I never had
+      a family and my dream is long dead. I could eat you right now but I won't.
+      \r"
+  - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
+    Message: Why would you eat me?
+  - Actor: {fileID: 11400000, guid: d508175b4929bab47bd5fe9ac56476d0, type: 2}
+    Message: "I see you\u2019re a bit stupid. I\u2019ll give you something, maybe
+      it can teach one or two lessons about roots."
