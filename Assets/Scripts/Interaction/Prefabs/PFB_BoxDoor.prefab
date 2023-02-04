@@ -116,7 +116,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Collider: {fileID: 9023572483439543064}
-  gizmoColor: {r: 0.13880952, g: 0.46005437, b: 0.583, a: 0.5882353}
+  gizmoColor: {r: 0.13725488, g: 0.23574226, b: 0.58431375, a: 0.5882353}
   OnEnterEvent:
     m_PersistentCalls:
       m_Calls:

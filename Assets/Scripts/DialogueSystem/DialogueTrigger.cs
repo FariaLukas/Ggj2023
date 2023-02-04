@@ -11,7 +11,7 @@ public class DialogueTrigger : CollisionDetection
     public void CallDialogue()
     {
         if (!Dialogue) return;
-        DialogueManager.Instance?.StartDialogue(Dialogue);
+        DialogueManager.Instance?.StartDialogue(Dialogue, OnEndDialogue);
     }
 
     protected override void TriggerEnter(GameObject instigator)
@@ -19,5 +19,10 @@ public class DialogueTrigger : CollisionDetection
         base.TriggerEnter(instigator);
         CallDialogue();
         Collider.enabled = false;
+    }
+
+    protected virtual void OnEndDialogue()
+    {
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
@@ -17,7 +18,8 @@ public class DialogueManager : Singleton<DialogueManager>
     private Coroutine _typer;
     private Sentence _currentSentence;
     private WaitForSeconds _wait;
-    public UnityEngine.Events.UnityEvent _onEndAnimationIn, _onEndAnimationOut;
+    public UnityEvent _onEndAnimationIn, _onEndAnimationOut;
+    private UnityAction _onEndDialogue;
 
     private void Start()
     {
@@ -32,7 +34,7 @@ public class DialogueManager : Singleton<DialogueManager>
             DisplayNextSentence();
     }
 
-    public void StartDialogue(DialogueSO dialogue)
+    public void StartDialogue(DialogueSO dialogue, UnityAction onEnd = null)
     {
         if (IsPlaying() || dialogue == null) return;
 
@@ -41,6 +43,7 @@ public class DialogueManager : Singleton<DialogueManager>
         dialogue.Dialogue.ForEach(d => _sentences.Enqueue(d));
 
         _currentDialogue = dialogue;
+        _onEndDialogue = onEnd;
 
         SetActorsDisplayer();
 
@@ -160,6 +163,8 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         _currentDialogue = null;
         Message.text = "";
+        _onEndDialogue?.Invoke();
+        _onEndDialogue = null;
     }
 
     private bool CanAdvanceDialogue()

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 99570499164811191, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
       propertyPath: m_Name
-      value: PFB_Movable_Hole
+      value: PFB_Movable_Hole Variant
       objectReference: {fileID: 0}
     - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
       propertyPath: m_RootOrder
@@ -58,6 +58,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5874169905990770168, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+--- !u!114 &4156153653914274946 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6508293333210026641, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+  m_PrefabInstance: {fileID: 7205625226892566035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106182274576937380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3fcdbd24666e45b3ba42d40f159d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &6746407753466447946 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 4494464799249880665, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
@@ -107,7 +118,19 @@ MonoBehaviour:
   gizmoColor: {r: 0, g: 0, b: 0, a: 0}
   OnEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4156153653914274946}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnStayEvent:
     m_PersistentCalls:
       m_Calls: []

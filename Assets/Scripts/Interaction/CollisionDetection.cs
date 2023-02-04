@@ -77,12 +77,21 @@ public class CollisionDetection : MonoBehaviour
     private void OnDrawGizmos()
     {
         if (!Collider) return;
+        Gizmos.matrix = transform.localToWorldMatrix;
         if (Collider is BoxCollider2D)
         {
             Gizmos.color = gizmoColor;
 
             BoxCollider2D col = (BoxCollider2D)Collider;
-            Gizmos.DrawCube(transform.position + (Vector3)Collider.offset, col.size);
+            Gizmos.DrawCube((Vector3)Collider.offset, col.size);
+        }
+
+        if (Collider is CircleCollider2D)
+        {
+            Gizmos.color = gizmoColor;
+
+            CircleCollider2D col = (CircleCollider2D)Collider;
+            Gizmos.DrawSphere((Vector3)Collider.offset, col.radius);
         }
     }
 }

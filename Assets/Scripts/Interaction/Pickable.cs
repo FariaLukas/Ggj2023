@@ -71,7 +71,7 @@ public class Pickable : CollisionDetection, IResetable
         }
     }
 
-    protected virtual void PickUp()
+    public virtual void PickUp()
     {
         OnPick?.Invoke();
         OnPickEvent.Invoke();
@@ -83,10 +83,10 @@ public class Pickable : CollisionDetection, IResetable
             Visual.gameObject.SetActive(false);
         }
 
+        _collected = true;
+
         if (Data)
             Inventory.Instance?.AddItem(Data.Identifier);
-
-        _collected = true;
 
         if (_checkpoint)
             CheckpointManager.Instance.SetNewCheckpoint(_checkpoint);
