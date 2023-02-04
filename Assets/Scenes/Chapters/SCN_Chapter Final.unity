@@ -5101,12 +5101,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5337924438367702155, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
       propertyPath: sceneToLoad.scenePath
-      value: Assets/Scenes/SCN_Fase_3.unity
+      value: Assets/Scenes/SCN_Main_Menu.unity
       objectReference: {fileID: 0}
     - target: {fileID: 5337924438367702155, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
       propertyPath: sceneToLoad.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 647019a700661d746b8926868a8f6489, type: 3}
+      objectReference: {fileID: 102900000, guid: a112fc0a16fe2d24c9f3e70d0d596563, type: 3}
     - target: {fileID: 5337924438448768534, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
       propertyPath: m_Name
       value: PFB_Canvas_Chapter
@@ -5195,14 +5195,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6847809796421240488, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847809796421240488, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847809797568545609, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847809797568545609, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847809797568545609, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 93
+      objectReference: {fileID: 0}
     - target: {fileID: 8276099689880610955, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
       propertyPath: m_text
-      value: "Chapter 3: \nNot all roots are good"
+      value: Rootless
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276099689880610955, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_fontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276099689880610955, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8276099690763545962, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
       propertyPath: m_text
-      value: 'What if my roots never existed? Maybe the path would be easier without
-        the stumble. '
+      value: Thank you for playing our game for GlobalGameJam 2023!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276099690763545962, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276099690763545962, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401197355193031210, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12b71dece4ce0654fbb55749521b84da, type: 3}

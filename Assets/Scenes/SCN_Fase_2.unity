@@ -5612,12 +5612,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1179071650993313213, guid: dad1fd8a6f5cc08459c97d1eaea3db86, type: 3}
       propertyPath: nextScene.scenePath
-      value: Assets/Scenes/SCN_Main_Menu.unity
+      value: Assets/Scenes/SCN_Fase_3.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1179071650993313213, guid: dad1fd8a6f5cc08459c97d1eaea3db86, type: 3}
       propertyPath: nextScene.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: a112fc0a16fe2d24c9f3e70d0d596563, type: 3}
+      objectReference: {fileID: 102900000, guid: 647019a700661d746b8926868a8f6489, type: 3}
     - target: {fileID: 1179071650993313215, guid: dad1fd8a6f5cc08459c97d1eaea3db86, type: 3}
       propertyPath: m_Name
       value: 'GoToNextLevel '

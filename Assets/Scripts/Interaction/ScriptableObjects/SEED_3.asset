@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SEED_3
   m_EditorClassIdentifier: 
   Identifier: Seed Three
-  Displayer: {fileID: 21300000, guid: 75f04f427ad459446bad7ddc5689bb3a, type: 3}
-  DisplayerOff: {fileID: 21300000, guid: 2df236adde6dce84d824f913f146780e, type: 3}
-  DisplayerUsed: {fileID: 21300000, guid: d5a7dfa690075d34e9c6566381314464, type: 3}
-  DisplayerWorld: {fileID: 21300000, guid: 5199b4c6b0dc7844b9bee5feb5b33919, type: 3}
+  Displayer: {fileID: 21300000, guid: 223891db98d949c46b054314a57ed8ae, type: 3}
+  DisplayerOff: {fileID: 21300000, guid: 670319f24da10b94ea76ade025bc5b59, type: 3}
+  DisplayerUsed: {fileID: 21300000, guid: 49fdc2e4e14fcc24ab5400478529396e, type: 3}
+  DisplayerWorld: {fileID: 21300000, guid: ef7e15c8533ca4b44962628de3856d3a, type: 3}
