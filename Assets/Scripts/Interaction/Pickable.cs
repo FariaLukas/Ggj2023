@@ -7,7 +7,8 @@ using UnityEngine.Events;
 
 public class Pickable : CollisionDetection, IResetable
 {
-    [SerializeField] private PickableData Data;
+    [SerializeField] private SpriteRenderer Renderer;
+    public PickableData Data;
     [FoldoutGroup("Events")]
     [PropertyOrder(2)]
     public UnityEvent OnPickEvent;
@@ -30,9 +31,12 @@ public class Pickable : CollisionDetection, IResetable
     private void Awake()
     {
         _initialPosition = transform.position;
-        
+
         if (IsCheckpoint)
             _checkpoint = GetComponent<Checkpoint>();
+
+        if (Data && Data.DisplayerWorld && Renderer)
+            Renderer.sprite = Data.DisplayerWorld;
     }
 
     protected override void TriggerEnter(GameObject instigator)

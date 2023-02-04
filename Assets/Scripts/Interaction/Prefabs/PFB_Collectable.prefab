@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4308412996074856322}
   - component: {fileID: 4308412996074856323}
   - component: {fileID: 6228942537253073278}
+  - component: {fileID: 2580207147712319925}
   m_Layer: 0
   m_Name: PFB_Collectable
   m_TagString: Untagged
@@ -77,10 +78,23 @@ MonoBehaviour:
   OnExitEvent:
     m_PersistentCalls:
       m_Calls: []
+  Renderer: {fileID: 4308412996623731815}
   Data: {fileID: 11400000, guid: 7667ec10b0fd9c645a61bbfebbd207ae, type: 2}
   OnPickEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2580207147712319925}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Visual: {fileID: 4308412996074856324}
   IsCheckpoint: 1
   Animate: 1
@@ -115,6 +129,29 @@ MonoBehaviour:
       m_Calls: []
   ShowWarning: 1
   SetCheckpointOnTrigger: 0
+--- !u!114 &2580207147712319925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308412996074856320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3fcdbd24666e45b3ba42d40f159d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 11400000, guid: aaefc2b1df594414a872e882e26d59d0, type: 2}
+  settings: {fileID: 0}
+  reset: 0
+  playIfNotPlaying: 0
+  localPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  debug: 0
+  isSfx: 1
+  playOnStart: 0
+  playOnEnable: 0
+  stropAllOnEnable: 0
 --- !u!1 &4308412996623731813
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +225,8 @@ SpriteRenderer:
   m_SortingLayerID: -613504065
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2135585597343286014, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
-  m_Color: {r: 0.058070898, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5199b4c6b0dc7844b9bee5feb5b33919, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

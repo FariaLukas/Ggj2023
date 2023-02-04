@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Inventory : Singleton<Inventory>
 {
-    public const string keysSave = "Inventory";
     public const string storageSave = "Awards";
     public List<string> CurrentHeldObjects = new List<string>();
     public List<string> AwardsObjects = new List<string>();
@@ -34,13 +33,11 @@ public class Inventory : Singleton<Inventory>
         if (!CurrentHeldObjects.Contains(itemName)) return;
         CurrentHeldObjects.Remove(itemName);
         OnUpdateInventory?.Invoke();
-        Save();
     }
 
     protected void Save()
     {
-        //ES3.Save(saveKey, CurrentHeldObjects);
-        //ES3.Save(storageSave, AwardsObjects);
+        ES3.Save(storageSave, AwardsObjects);
     }
 
     public bool HasItem(string itemName)
@@ -50,11 +47,10 @@ public class Inventory : Singleton<Inventory>
 
     protected void Load()
     {
-        // if (ES3.KeyExists(saveKey))
-        //     ES3.LoadInto(saveKey, CurrentHeldObjects);
-
-        // if (ES3.KeyExists(storageSave))
-        //     ES3.LoadInto(storageSave, AwardsObjects);
+        if (ES3.KeyExists(storageSave))
+        {
+            AwardsObjects = ES3.Load<List<string>>(storageSave);
+        }
 
         OnUpdateInventory?.Invoke();
     }

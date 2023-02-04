@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2334313368974861328}
   - component: {fileID: 2334313368974861423}
   - component: {fileID: 2334313368974861422}
+  - component: {fileID: 2860069572612867539}
+  - component: {fileID: 2702878113716732302}
   m_Layer: 6
   m_Name: PFB_MovableBox
   m_TagString: Untagged
@@ -133,3 +135,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &2860069572612867539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334313368974861421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2607ecc9e03e54c96259664175f2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Audio: {fileID: 2702878113716732302}
+--- !u!114 &2702878113716732302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334313368974861421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3fcdbd24666e45b3ba42d40f159d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 11400000, guid: 273168a0a548d1247b27b1bd8d4d397a, type: 2}
+  settings: {fileID: 0}
+  reset: 0
+  playIfNotPlaying: 1
+  localPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  debug: 0
+  isSfx: 1
+  playOnStart: 0
+  playOnEnable: 0
+  stropAllOnEnable: 0

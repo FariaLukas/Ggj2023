@@ -23,4 +23,18 @@ public class Door : CollisionDetection
         Collider.enabled = false;
         Visual.SetActive(false);
     }
+
+    private void OnDrawGizmos()
+    {
+        if (Application.isPlaying) return;
+        if (Key)
+        {
+            var keys = FindObjectsOfType<Pickable>();
+            foreach (var key in keys)
+            {
+                if (key.Data.Equals(Key))
+                    Gizmos.DrawLine(transform.position, key.transform.position);
+            }
+        }
+    }
 }

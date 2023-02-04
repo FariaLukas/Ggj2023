@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 9023572483439543067}
   - component: {fileID: 9023572483439543065}
   - component: {fileID: 9023572483439543064}
+  - component: {fileID: 960050092717731225}
   m_Layer: 0
   m_Name: BoxPlacer
   m_TagString: Untagged
@@ -118,7 +119,19 @@ MonoBehaviour:
   gizmoColor: {r: 0.13880952, g: 0.46005437, b: 0.583, a: 0.5882353}
   OnEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960050092717731225}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnStayEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -153,6 +166,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.27, y: 1.18}
   m_EdgeRadius: 0
+--- !u!114 &960050092717731225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023572483439543066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3fcdbd24666e45b3ba42d40f159d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 11400000, guid: 88836c25edecbc3429bd6f5fbfbab9e9, type: 2}
+  settings: {fileID: 0}
+  reset: 0
+  playIfNotPlaying: 0
+  localPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  debug: 0
+  isSfx: 1
+  playOnStart: 0
+  playOnEnable: 0
+  stropAllOnEnable: 0
 --- !u!1 &9023572483551034135
 GameObject:
   m_ObjectHideFlags: 0

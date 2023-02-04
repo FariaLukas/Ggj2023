@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 3774843194520613387}
   - component: {fileID: 3774843194520613396}
   - component: {fileID: 3774843194520613397}
+  - component: {fileID: 1218968557685990175}
   m_Layer: 0
   m_Name: PFB_AnimationShower
   m_TagString: Untagged
@@ -136,7 +137,19 @@ MonoBehaviour:
   gizmoColor: {r: 0.32168818, g: 0.7735849, b: 0.22988607, a: 0.7176471}
   OnEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1218968557685990175}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlaySfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnStayEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -173,6 +186,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.68, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1218968557685990175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3774843194520613398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3fcdbd24666e45b3ba42d40f159d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 11400000, guid: a1f6e9afbafe0d4429a0bb98b89c433c, type: 2}
+  settings: {fileID: 0}
+  reset: 0
+  playIfNotPlaying: 0
+  localPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  debug: 0
+  isSfx: 1
+  playOnStart: 0
+  playOnEnable: 0
+  stropAllOnEnable: 0
 --- !u!1 &3774843195016398056
 GameObject:
   m_ObjectHideFlags: 0

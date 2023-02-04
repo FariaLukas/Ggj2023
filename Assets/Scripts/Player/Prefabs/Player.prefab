@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3502452946451288028}
   - component: {fileID: 6260785600864871664}
   - component: {fileID: 5369014858940478681}
+  - component: {fileID: 5044844491964965029}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -148,6 +149,7 @@ MonoBehaviour:
   XDeadzone: {x: -0.05, y: 0.05}
   YDeadzone: {x: -0.05, y: 0.05}
   Audio: {fileID: 5369014858940478681}
+  Animator: {fileID: 5044844491964965029}
   _pipe: {fileID: 5465578138014664411}
 --- !u!58 &5754036453476085464
 CircleCollider2D:
@@ -290,6 +292,26 @@ MonoBehaviour:
   playOnStart: 0
   playOnEnable: 0
   stropAllOnEnable: 0
+--- !u!95 &5044844491964965029
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754036453476085468}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44a818acba384bb44b60b7dd4cfa6864, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &5754036454276562464
 GameObject:
   m_ObjectHideFlags: 0

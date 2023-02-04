@@ -83,12 +83,14 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void SetActorsDisplayer()
     {
+        int actorsQuantity = 0;
         foreach (var sentence in _currentDialogue.Dialogue)
         {
             if (sentence.Actor.LeftSide)
             {
                 if (ActorLeft)
                 {
+                    actorsQuantity++;
                     ActorLeft.sprite = sentence.Actor.ActorSprite;
                     ActorLeft.gameObject.SetActive(sentence.Actor.ActorSprite != null);
 
@@ -98,10 +100,20 @@ public class DialogueManager : Singleton<DialogueManager>
             {
                 if (ActorRight)
                 {
+                    actorsQuantity++;
                     ActorRight.sprite = sentence.Actor.ActorSprite;
                     ActorRight.gameObject.SetActive(sentence.Actor.ActorSprite != null);
                 }
             }
+        }
+
+        if (actorsQuantity == 1)
+        {
+            bool isLeftActor = _currentDialogue.Dialogue[0].Actor.LeftSide;
+            if (!isLeftActor)
+                ActorLeft.gameObject.SetActive(false);
+            else
+                ActorRight.gameObject.SetActive(false);
         }
 
         UpdateActorTalking();

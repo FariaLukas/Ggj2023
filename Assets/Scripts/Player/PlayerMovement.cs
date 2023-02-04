@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 MinSpeed;
     [SerializeField] private Vector2 XDeadzone = new Vector2(-.05f, .05f), YDeadzone = new Vector2(-.05f, .05f);
     [SerializeField] private AudioPlayer Audio;
+    [SerializeField] private Animator Animator;
 
     [SerializeField] private FloodgatesPipe _pipe;
     private Vector3 _lerpAcceleration;
@@ -32,7 +33,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!_pipe.IsOpen()) return;
+        if (!_pipe.IsOpen())
+        {
+            _lerpAcceleration = _acceleration = Vector3.zero;
+            Audio.StopAudio();
+            Animator.SetBool("Moving", false);
+            return;
+        }
 
         _acceleration = Input.acceleration;
         _acceleration.x = _acceleration.x > XDeadzone.x && _acceleration.x < XDeadzone.y ? 0 : _acceleration.x;
@@ -54,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!_pipe.IsOpen())
         {
-            _lerpAcceleration = _acceleration = Vector3.zero;
             return;
         }
 
@@ -66,24 +72,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (dir.sqrMagnitude > 1) dir.Normalize();
 
+        bool moving = _acceleration != Vector3.zero;
 #if UNITY_EDITOR
 
         if (!NotUsingKeyboard)
         {
             dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-            if (dir != Vector2.zero)
-            {
-                Audio.PlaySfx();
-            }
-            else
-            {
-                Audio.StopAudio();
-            }
-
+            moving = dir != Vector2.zero;
         }
-
-#else
-        if (_acceleration != Vector3.zero)
+#endif
+        if (moving)
         {
             Audio.PlaySfx();
         }
@@ -91,8 +89,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Audio.StopAudio();
         }
-#endif
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, dir);
+
+        Animator.SetBool("Moving", moving);
+
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, moving ? dir : Vector2.zero);
         PlayerRigidbody.MovePosition((Vector2)transform.position + dir * MovementSpeed * Time.fixedDeltaTime);
     }
 

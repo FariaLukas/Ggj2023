@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
+using Sirenix.OdinInspector;
 
 public class AnimateVines : CollisionDetection
 {
@@ -9,6 +11,10 @@ public class AnimateVines : CollisionDetection
     [SerializeField] private float Speed;
     [SerializeField] private GameObject MaskObject;
     [SerializeField] private Ease ease;
+    [FoldoutGroup("Events")]
+    [PropertyOrder(2)]
+
+    [SerializeField] private UnityEvent OnAnimationFinished;
 
     private void Start()
     {
@@ -31,5 +37,6 @@ public class AnimateVines : CollisionDetection
     {
         Animating = false;
         MaskObject.SetActive(false);
+        OnAnimationFinished?.Invoke();
     }
 }
