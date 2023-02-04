@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float LerpSpeed = 2.0f;
     [SerializeField] private Vector2 MinSpeed;
     [SerializeField] private Vector2 XDeadzone = new Vector2(-.05f, .05f), YDeadzone = new Vector2(-.05f, .05f);
+    [SerializeField] private AudioPlayer Audio;
 
     [SerializeField] private FloodgatesPipe _pipe;
     private Vector3 _lerpAcceleration;
@@ -66,10 +67,32 @@ public class PlayerMovement : MonoBehaviour
         if (dir.sqrMagnitude > 1) dir.Normalize();
 
 #if UNITY_EDITOR
-        if (!NotUsingKeyboard)
-            dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-#endif
 
+        if (!NotUsingKeyboard)
+        {
+            dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            if (dir != Vector2.zero)
+            {
+                Audio.PlaySfx();
+            }
+            else
+            {
+                Audio.StopAudio();
+            }
+
+        }
+
+#else
+        if (_acceleration != Vector3.zero)
+        {
+            Audio.PlaySfx();
+        }
+        else
+        {
+            Audio.StopAudio();
+        }
+#endif
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, dir);
         PlayerRigidbody.MovePosition((Vector2)transform.position + dir * MovementSpeed * Time.fixedDeltaTime);
     }
 

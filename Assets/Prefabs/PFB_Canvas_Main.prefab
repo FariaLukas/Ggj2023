@@ -754,7 +754,7 @@ PrefabInstance:
     - target: {fileID: 4658791160842157459, guid: da8ba242404765b49a16823bdcb9846b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e339205359f0ae84da9b68db8f5d0f36, type: 3}
+      objectReference: {fileID: 21300000, guid: ab5957be6ab63884b8b908f88c1f00d7, type: 3}
     - target: {fileID: 4658791160842157459, guid: da8ba242404765b49a16823bdcb9846b, type: 3}
       propertyPath: m_PreserveAspect
       value: 1

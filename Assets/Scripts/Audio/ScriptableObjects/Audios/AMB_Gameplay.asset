@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: AMB_Gameplay
   m_EditorClassIdentifier: 
   looping: 1
+  isMusic: 0
   sequenceMode: 0
   clip:
-  - {fileID: 8300000, guid: 31e94ff3eccec7843a6437bf9e34f47f, type: 3}
+  - {fileID: 8300000, guid: bac45366c50aeaf4093b6d13b81f9b61, type: 3}
   debug: 0

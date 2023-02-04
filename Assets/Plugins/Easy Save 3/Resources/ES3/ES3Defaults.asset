@@ -35,6 +35,8 @@ MonoBehaviour:
     - Cinemachine
     - PsdPlugin
     - Sirenix.OdinInspector.Modules.UnityMathematics
+    - TextMeshProEffect
+    - TextMeshProEffect.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

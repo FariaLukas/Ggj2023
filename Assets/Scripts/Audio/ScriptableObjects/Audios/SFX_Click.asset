@@ -16,5 +16,5 @@ MonoBehaviour:
   isMusic: 0
   sequenceMode: 0
   clip:
-  - {fileID: 8300000, guid: c72f9de4ded2573479e26113d60bcb96, type: 3}
+  - {fileID: 8300000, guid: 8f9fafc810312074aa6072f8070e8a47, type: 3}
   debug: 0

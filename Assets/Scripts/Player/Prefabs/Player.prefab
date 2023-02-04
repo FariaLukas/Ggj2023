@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 3749779658380526985}
   - component: {fileID: 3502452946451288028}
   - component: {fileID: 6260785600864871664}
+  - component: {fileID: 5369014858940478681}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -140,11 +141,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementType: 1
   PlayerRigidbody: {fileID: 5754036453476085031}
+  NotUsingKeyboard: 0
   MovementSpeed: 15
   LerpSpeed: 2
   MinSpeed: {x: 0, y: 0}
   XDeadzone: {x: -0.05, y: 0.05}
   YDeadzone: {x: -0.05, y: 0.05}
+  Audio: {fileID: 5369014858940478681}
   _pipe: {fileID: 5465578138014664411}
 --- !u!58 &5754036453476085464
 CircleCollider2D:
@@ -264,6 +267,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floodgateName: 
+--- !u!114 &5369014858940478681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754036453476085468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb3fcdbd24666e45b3ba42d40f159d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 11400000, guid: 683bb2891e3085c43b5526d964cfe98e, type: 2}
+  settings: {fileID: 0}
+  reset: 0
+  playIfNotPlaying: 1
+  localPosition: 0
+  position: {x: 0, y: 0, z: 0}
+  debug: 0
+  isSfx: 1
+  playOnStart: 0
+  playOnEnable: 0
+  stropAllOnEnable: 0
 --- !u!1 &5754036454276562464
 GameObject:
   m_ObjectHideFlags: 0

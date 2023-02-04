@@ -81,7 +81,11 @@ public class AudioPlayer : MonoBehaviour
             _currenSource = AudioManager.Instance.PlaySfx(clipSO, transform.position + position,
             settingsSO, playIfNotPlaying, reset);
         else
-            _currenSource = AudioManager.Instance.PlaySfx(clipSO, settingsSO, playIfNotPlaying, reset);
+        {
+            var source = AudioManager.Instance.PlaySfx(clipSO, settingsSO, playIfNotPlaying, reset);
+            if (source != null)
+                _currenSource = source;
+        }
     }
 
     [Button]
@@ -102,7 +106,9 @@ public class AudioPlayer : MonoBehaviour
         if (!_currenSource) return;
         if (CanPlay() && _currenSource.isPlaying &&
         _currenSource.clip == audioClip.GetAudioClip())
+        {
             AudioManager.Instance.StopAudio(_currenSource);
+        }
     }
 
     protected bool CanPlay()

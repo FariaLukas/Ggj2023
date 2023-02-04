@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5524264522022897709}
   - component: {fileID: 5524264522022897710}
   - component: {fileID: 5524264522022897711}
+  - component: {fileID: 6674494535189152304}
   m_Layer: 0
   m_Name: PFB_Collider
   m_TagString: Untagged
@@ -205,3 +206,16 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &6674494535189152304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524264522022897704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7116ab6aad2b7d74893e1bbd8e10c546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Collider2D: {fileID: 5524264522022897711}

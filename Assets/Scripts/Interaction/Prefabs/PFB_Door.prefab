@@ -161,6 +161,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   Collider: {fileID: 4395622007636607243}
+  gizmoColor: {r: 0, g: 0, b: 0, a: 0}
   OnEnterEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -185,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.51}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -196,5 +197,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.82, y: 0.91}
+  m_Size: {x: 2.82, y: 2}
   m_EdgeRadius: 0

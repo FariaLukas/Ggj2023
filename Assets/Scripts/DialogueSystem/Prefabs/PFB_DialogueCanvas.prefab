@@ -771,7 +771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521182326354711692, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9953909
       objectReference: {fileID: 0}
     - target: {fileID: 1521182326354711692, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -783,7 +783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521182326354711692, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.09590106
       objectReference: {fileID: 0}
     - target: {fileID: 1521182326354711692, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521182326354711692, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 11.006
       objectReference: {fileID: 0}
     - target: {fileID: 4093351151741124430, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_text
@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4093351151741124430, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_fontSize
-      value: 36
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4093351151741124430, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_fontAsset
@@ -819,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e19d6fb885ba0fe429ecf369f53f6499, type: 2}
     - target: {fileID: 4093351151741124430, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_fontSizeMax
-      value: 36
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4093351151741124430, guid: 9e1788016d0a52241a3dfb642c58f4e1, type: 3}
       propertyPath: m_sharedMaterial

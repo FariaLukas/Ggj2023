@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2334313368974861328}
   - component: {fileID: 2334313368974861423}
   - component: {fileID: 2334313368974861422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PFB_MovableBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
