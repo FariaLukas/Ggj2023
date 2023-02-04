@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6d417cab89162b4ab77d1a1030ad641, type: 3}
-  m_Name: DLG_Tutorial_2
+  m_Script: {fileID: 11500000, guid: ec77c460903c5064a8fc99e31d15f403, type: 3}
+  m_Name: Actor_Deusa
   m_EditorClassIdentifier: 
-  Dialogue:
-  - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
-    Message: 
+  ActorName: Deusa
+  ActorSprite: {fileID: 21300000, guid: 32387e46a03fe6d4c8b045a10f9e24c1, type: 3}
+  LeftSide: 0
