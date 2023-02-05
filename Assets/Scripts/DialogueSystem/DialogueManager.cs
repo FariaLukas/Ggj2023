@@ -86,14 +86,15 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void SetActorsDisplayer()
     {
-        int actorsQuantity = 0;
+        List<DialogueActor> actorsQuantity = new List<DialogueActor>();
         foreach (var sentence in _currentDialogue.Dialogue)
         {
             if (sentence.Actor.LeftSide)
             {
                 if (ActorLeft)
                 {
-                    actorsQuantity++;
+                    if (!actorsQuantity.Contains(sentence.Actor))
+                        actorsQuantity.Add(sentence.Actor);
                     ActorLeft.sprite = sentence.Actor.ActorSprite;
                     ActorLeft.gameObject.SetActive(sentence.Actor.ActorSprite != null);
 
@@ -103,14 +104,15 @@ public class DialogueManager : Singleton<DialogueManager>
             {
                 if (ActorRight)
                 {
-                    actorsQuantity++;
+                    if (!actorsQuantity.Contains(sentence.Actor))
+                        actorsQuantity.Add(sentence.Actor);
                     ActorRight.sprite = sentence.Actor.ActorSprite;
                     ActorRight.gameObject.SetActive(sentence.Actor.ActorSprite != null);
                 }
             }
         }
 
-        if (actorsQuantity == 1)
+        if (actorsQuantity.Count == 1)
         {
             bool isLeftActor = _currentDialogue.Dialogue[0].Actor.LeftSide;
             if (!isLeftActor)

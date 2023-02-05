@@ -17,11 +17,11 @@ public class BoxPlacer : CollisionDetection
         base.TriggerEnter(instigator);
 
         colliders.SetActive(true);
-
+        Collider.enabled = false;
+        instigator.GetComponent<Collider2D>().enabled = false;
+    
         instigator.transform.position = snaper.position;
         instigator.transform.rotation = snaper.rotation;
-        instigator.GetComponent<Collider2D>().enabled = false;
         instigator.GetComponent<BoxMovable>().SetCollected();
-        Collider.enabled = false;
     }
 }

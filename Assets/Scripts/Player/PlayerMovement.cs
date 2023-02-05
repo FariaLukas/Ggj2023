@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if (!_pipe.IsOpen())
         {
             _lerpAcceleration = _acceleration = Vector3.zero;
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector2.zero);
             Audio.StopAudio();
             Animator.SetBool("Moving", false);
             return;
