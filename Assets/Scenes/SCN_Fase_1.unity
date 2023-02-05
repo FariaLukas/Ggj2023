@@ -436,6 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7034112662900026601, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_ShapeTexture
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
 --- !u!4 &281281542 stripped
@@ -813,7 +817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4395622007636607244, guid: eb951069e45381442b46886c75ff6848, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4395622007636607245, guid: eb951069e45381442b46886c75ff6848, type: 3}
       propertyPath: m_MaskInteraction
@@ -2057,6 +2061,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1551562471}
     m_Modifications:
+    - target: {fileID: 171618120002040570, guid: 62efa05755f61bf40a62b85f6e61d26f, type: 3}
+      propertyPath: m_ShapeTexture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7106182274576937380, guid: 62efa05755f61bf40a62b85f6e61d26f, type: 3}
       propertyPath: m_Name
       value: PFB_Movable_Hole Variant
@@ -2208,6 +2216,10 @@ PrefabInstance:
     - target: {fileID: 527969020463199258, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034112662900026601, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_ShapeTexture
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
@@ -3652,6 +3664,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7034112662900026601, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
+      propertyPath: m_ShapeTexture
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bec3409aade2d24cb6b409898c3e118, type: 3}
 --- !u!4 &2045171087 stripped
@@ -3955,6 +3971,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1551562471}
     m_Modifications:
+    - target: {fileID: 3707327169339015885, guid: 0312c22e97bf21d44aa1464659603c35, type: 3}
+      propertyPath: m_ShapeTexture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6020358938480034195, guid: 0312c22e97bf21d44aa1464659603c35, type: 3}
       propertyPath: m_Name
       value: PFB_hole
