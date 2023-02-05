@@ -73,12 +73,19 @@ public class PlayerMovement : MonoBehaviour
         if (dir.sqrMagnitude > 1) dir.Normalize();
 
         bool moving = _acceleration != Vector3.zero;
+
+        var inp = Input.acceleration;
+        inp.x = inp.x > -.02f && inp.x < .02f ? 0 : inp.x;
+        inp.y = inp.y > -.02f && inp.y < .02f ? 0 : inp.y;
+        inp.z = 0;
+
 #if UNITY_EDITOR
 
         if (!NotUsingKeyboard)
         {
             dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
             moving = dir != Vector2.zero;
+            inp = dir;
         }
 #endif
         if (moving)
@@ -90,7 +97,8 @@ public class PlayerMovement : MonoBehaviour
             Audio.StopAudio();
         }
 
-        Animator.SetBool("Moving", moving);
+
+        Animator.SetBool("Moving", inp != Vector3.zero);
 
         transform.rotation = Quaternion.LookRotation(Vector3.forward, moving ? dir : Vector2.zero);
         PlayerRigidbody.MovePosition((Vector2)transform.position + dir * MovementSpeed * Time.fixedDeltaTime);

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Actor_Sapo
   m_EditorClassIdentifier: 
   ActorName: Mosca
-  ActorSprite: {fileID: 21300000, guid: 9e739600f62bdf64abbf09d1349bbb4b, type: 3}
+  ActorSprite: {fileID: 21300000, guid: 9dbac34f9d3de4045b5bd2a7db779e82, type: 3}
   LeftSide: 0

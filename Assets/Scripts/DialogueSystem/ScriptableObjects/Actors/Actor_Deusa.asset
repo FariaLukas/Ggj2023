@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Actor_Deusa
   m_EditorClassIdentifier: 
   ActorName: Deusa
-  ActorSprite: {fileID: 21300000, guid: 91c26dfdccbe40b4eb048978f7687701, type: 3}
+  ActorSprite: {fileID: 21300000, guid: 9cb64f5ca1d236e40a3dd9f908621638, type: 3}
   LeftSide: 0

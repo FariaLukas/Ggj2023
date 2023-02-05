@@ -45,7 +45,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -178,7 +178,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.03}
-  m_EdgeRadius: 0.22
+  m_EdgeRadius: 0
   m_Points:
   - {x: -3.8646917, y: 0.7825662}
   - {x: -3.8730226, y: 1.3112483}
