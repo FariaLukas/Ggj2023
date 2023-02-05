@@ -8,11 +8,34 @@ public class HoleMovable : Hole
     [SerializeField] private float Speed = 5;
     [SerializeField] private float MinDistance = .2f;
     [SerializeField] private WaypointSystem waypoints;
+    [SerializeField] private List<GameObject> waypointsDisplayer = new List<GameObject>();
     [SerializeField] private bool Lerp;
 
     private Vector3 _targetPosition;
     private float _startTime;
     private float _journeyLength;
+
+    private void Start()
+    {
+        while (waypointsDisplayer.Count < waypoints.positions.Count)
+        {
+            var p = Instantiate(waypointsDisplayer[0], transform);
+            waypointsDisplayer.Add(p);
+        }
+
+        for (int i = 0; i < waypoints.positions.Count; i++)
+        {
+            waypointsDisplayer[i].transform.position = waypoints.positions[i];
+        }
+
+        if (waypointsDisplayer.Count > waypoints.positions.Count)
+            for (int i = waypoints.positions.Count - 1; i < waypointsDisplayer.Count; i++)
+            {
+                waypointsDisplayer[i].SetActive(false);
+            }
+
+        waypointsDisplayer.ForEach(w => w.transform.parent = null);
+    }
 
     private void Update()
     {

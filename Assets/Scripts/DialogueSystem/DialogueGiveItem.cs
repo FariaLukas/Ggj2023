@@ -8,6 +8,7 @@ public class DialogueGiveItem : DialogueTrigger
 
     protected override void OnEndDialogue()
     {
+        base.OnEndDialogue();
         pickable.PickUp();
     }
 }

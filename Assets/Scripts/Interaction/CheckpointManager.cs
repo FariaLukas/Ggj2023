@@ -43,8 +43,6 @@ public class CheckpointManager : Singleton<CheckpointManager>
     public void RespawnCharacter(GameObject character)
     {
         RespawnIn(() => RespawnOut(), character);
-
-        resetables.ForEach(r => r.OnReset());
     }
 
     public void RespawnIn(UnityAction onEnd = null, GameObject character = null)
@@ -56,6 +54,7 @@ public class CheckpointManager : Singleton<CheckpointManager>
         RespawnAnimation.DOFade(1, respawnSpeed).OnComplete(() =>
         {
             onEnd?.Invoke();
+            resetables.ForEach(r => r.OnReset());
             if (character)
                 character.transform.position = CurrenCheckpoint ?
                 CurrenCheckpoint.transform.position : transform.position;

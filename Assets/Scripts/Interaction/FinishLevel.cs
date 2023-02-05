@@ -13,11 +13,17 @@ public class FinishLevel : CollisionDetection
         if (nextScene == null) return;
         base.TriggerEnter(instigator);
         Collider.enabled = false;
+        Finish();
+    }
+
+    public void Finish()
+    {
+        if (nextScene == null) return;
         CheckpointManager.Instance.RespawnIn(() =>
-        {
-            SceneManager.LoadScene(nextScene);
-            if (AudioPlayer)
-                AudioPlayer.PlaySfx();
-        });
+                {
+                    SceneManager.LoadScene(nextScene);
+                    if (AudioPlayer)
+                        AudioPlayer.PlaySfx();
+                });
     }
 }

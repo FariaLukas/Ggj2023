@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
   - Actor: {fileID: 11400000, guid: f50c3d52dc6f19241a0592b45c939e15, type: 2}
-    Message: 
+    Message: ... is this the way back home?

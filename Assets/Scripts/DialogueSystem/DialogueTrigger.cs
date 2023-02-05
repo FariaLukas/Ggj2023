@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueTrigger : CollisionDetection
 {
     [SerializeField] private DialogueSO Dialogue;
+    [FoldoutGroup("Events")]
+    [PropertyOrder(2)]
+    [SerializeField] private UnityEvent OnDialogueEnd;
 
     [Button]
     public void CallDialogue()
@@ -23,6 +27,6 @@ public class DialogueTrigger : CollisionDetection
 
     protected virtual void OnEndDialogue()
     {
-
+        OnDialogueEnd?.Invoke();
     }
 }

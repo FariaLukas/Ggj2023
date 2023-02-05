@@ -15,11 +15,13 @@ public class BoxPlacer : CollisionDetection
     protected override void TriggerEnter(GameObject instigator)
     {
         base.TriggerEnter(instigator);
-        
+
         colliders.SetActive(true);
 
         instigator.transform.position = snaper.position;
         instigator.transform.rotation = snaper.rotation;
         instigator.GetComponent<Collider2D>().enabled = false;
+        instigator.GetComponent<BoxMovable>().SetCollected();
+        Collider.enabled = false;
     }
 }

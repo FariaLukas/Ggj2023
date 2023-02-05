@@ -51,7 +51,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   Collider: {fileID: 4494464799249880665}
-  gizmoColor: {r: 0, g: 0, b: 0, a: 0}
+  gizmoColor: {r: 0.764151, g: 0.010813437, b: 0.010813437, a: 0.44705883}
   OnEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -195,8 +195,8 @@ SpriteRenderer:
   m_SortingLayerID: -613504065
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a8c58920b858350418ae2ced617a1d18, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

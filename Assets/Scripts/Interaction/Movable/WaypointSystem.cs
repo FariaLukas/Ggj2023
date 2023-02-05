@@ -9,6 +9,7 @@ namespace HamsterRacing.Waypoints
     public enum WaypointType { Cyclic, BackAndForth }
     public class WaypointSystem : MonoBehaviour
     {
+        public List<Vector3> positions => waypoints;
         [SerializeField] private WaypointType type;
         [SerializeField] private bool useTransformPosition = true;
         [SerializeField] private List<Vector3> waypoints = new List<Vector3>();
